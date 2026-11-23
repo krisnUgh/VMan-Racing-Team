@@ -1,0 +1,669 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>VMan Racing Team | Motorcycle Parts & Performance</title>
+
+  <meta name="description" content="VMan Racing Team - motorcycle parts, oils, upgrades, and motorcycle services in Quezon City.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- TOP ANNOUNCEMENT -->
+  <div class="announcement-bar">
+    <p>BUILT FOR THE RIDE. MADE FOR PERFORMANCE.</p>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <a href="#home" class="brand">
+      <img src="images/VMAN-logo.jpg" alt="VMan Racing Team Logo">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">HOME</a>
+      <a href="#shop">SHOP</a>
+      <a href="#services">SERVICES</a>
+      <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+
+    <button class="cart-trigger" id="openCart" aria-label="Open shopping cart">
+      <span class="cart-icon">🛒</span>
+      <span>CART</span>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="hero-bg-lines"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+
+        <span class="eyebrow">
+          <span class="red-dot"></span>
+          MOTORCYCLE PARTS & PERFORMANCE
+        </span>
+
+        <h1>
+          RIDE HARD.<br>
+          <span>STAY FAST.</span>
+        </h1>
+
+        <p>
+          Parts, oils, upgrades, and services built for riders
+          who demand more from every ride.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#shop" class="btn btn-red">
+            SHOP PRODUCTS <span>↗</span>
+          </a>
+
+          <a href="#services" class="btn btn-outline">
+            EXPLORE SERVICES
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>VMAN</strong>
+            <span>RACING TEAM</span>
+          </div>
+
+          <div class="stat-divider"></div>
+
+          <div class="stat">
+            <strong>QC</strong>
+            <span>QUEZON CITY</span>
+          </div>
+
+          <div class="stat-divider"></div>
+
+          <div class="stat">
+            <strong>RIDE</strong>
+            <span>WITH PURPOSE</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hero-side-text">VMAN RACING TEAM • PERFORMANCE • SPEED • PRECISION</div>
+
+      <div class="hero-bottom-line">
+        <span>01 / PERFORMANCE</span>
+        <span>BUILT FOR THE STREETS</span>
+      </div>
+
+    </section>
+
+    <!-- FEATURE STRIP -->
+    <section class="feature-strip">
+      <div class="feature-item">
+        <span class="feature-symbol">01</span>
+        <div>
+          <strong>QUALITY PARTS</strong>
+          <p>Parts for your motorcycle</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <span class="feature-symbol">02</span>
+        <div>
+          <strong>RIDER ESSENTIALS</strong>
+          <p>Oils and maintenance products</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <span class="feature-symbol">03</span>
+        <div>
+          <strong>PERFORMANCE SERVICE</strong>
+          <p>Repair and improvement</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP SECTION -->
+    <section class="shop-section section-padding" id="shop">
+
+      <div class="section-heading">
+        <div>
+          <span class="section-label">VMAN RACING TEAM CATALOG</span>
+          <h2>SHOP <span>THE RIDE.</span></h2>
+          <p>Parts, oils, and performance essentials for your machine.</p>
+        </div>
+
+        <div class="heading-side-note">
+          <span>SELECT.</span>
+          <span>UPGRADE.</span>
+          <span>PERFORM.</span>
+        </div>
+      </div>
+
+      <!-- FILTERS AND SEARCH -->
+      <div class="shop-toolbar">
+
+        <div class="category-filters" id="categoryFilters">
+          <button class="filter-btn active" data-category="All">ALL</button>
+          <button class="filter-btn" data-category="Fork Oil">FORK OIL</button>
+          <button class="filter-btn" data-category="Gear Oil">GEAR OIL</button>
+          <button class="filter-btn" data-category="Engine Oil">ENGINE OIL</button>
+          <button class="filter-btn" data-category="Tires">TIRES</button>
+        </div>
+
+        <div class="search-box">
+          <span class="search-icon">⌕</span>
+          <input
+            type="search"
+            id="productSearch"
+            placeholder="Search products..."
+            aria-label="Search products"
+          >
+        </div>
+
+      </div>
+
+      <!-- PRODUCT GRID -->
+      <div class="product-grid" id="productGrid"></div>
+
+      <div class="empty-products" id="emptyProducts" hidden>
+        <div class="empty-icon">×</div>
+        <h3>NO PRODUCTS FOUND</h3>
+        <p>Try another search or category.</p>
+      </div>
+
+      <div class="shop-bottom-note">
+        <span class="red-dot"></span>
+        PRICES ARE IN PHILIPPINE PESOS (PHP)
+      </div>
+
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services-section section-padding" id="services">
+
+      <div class="section-heading">
+        <div>
+          <span class="section-label">REPAIR • REBUILD • IMPROVE</span>
+          <h2>BUILT TO <span>PERFORM.</span></h2>
+          <p>Get your motorcycle ready for the road with VMan services.</p>
+        </div>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- SUSPENSION REPACK -->
+        <article class="service-card">
+
+          <div class="service-image">
+            <img
+              src="images/vman-suspension-repack.jpg"
+              alt="VMan front suspension repack service"
+              loading="lazy"
+            >
+            <span class="service-image-tag">01 / SUSPENSION</span>
+          </div>
+
+          <div class="service-card-content">
+
+            <span class="product-category">SUSPENSION SERVICE</span>
+
+            <h3>VMAN FRONT SUSPENSION REPACK</h3>
+
+            <p class="service-description">
+              Front suspension repack service for maintenance
+              and improved suspension performance.
+            </p>
+
+            <div class="service-price-row">
+              <span>PACKAGE PRICE</span>
+              <strong>₱1,300</strong>
+            </div>
+
+            <button
+              class="service-book"
+              data-service="VMan Front Suspension Repack - ₱1,300"
+            >
+              BOOK THIS SERVICE <span>↗</span>
+            </button>
+
+          </div>
+        </article>
+
+        <!-- RAIDER FI 154CC -->
+        <article class="service-card">
+
+          <div class="service-image">
+            <img
+              src="images/vman-raiderfi-154cc.jpg"
+              alt="Raider FI 154cc engine improvement package"
+              loading="lazy"
+            >
+            <span class="service-image-tag">02 / ENGINE UPGRADE</span>
+          </div>
+
+          <div class="service-card-content">
+
+            <span class="product-category">ENGINE IMPROVEMENT</span>
+
+            <h3>RAIDER FI 154CC</h3>
+
+            <p class="service-description">
+              Engine improvement package for Raider FI.
+            </p>
+
+            <div class="inclusions">
+              <span>PACKAGE INCLUSIONS</span>
+              <ul>
+                <li>Bore 63.5</li>
+                <li>Piston Ring</li>
+                <li>Piston Pin</li>
+                <li>Head Gasket</li>
+                <li>Base Gasket</li>
+              </ul>
+            </div>
+
+            <div class="service-price-row">
+              <span>PACKAGE PRICE</span>
+              <strong>₱3,000</strong>
+            </div>
+
+            <button
+              class="service-book"
+              data-service="Raider FI 154cc - ₱3,000"
+            >
+              BOOK THIS SERVICE <span>↗</span>
+            </button>
+
+          </div>
+        </article>
+
+      </div>
+
+      <div class="services-disclaimer">
+        <span>NOTE</span>
+        Service bookings are requests and will be confirmed by VMan Racing Team.
+      </div>
+
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section section-padding" id="about">
+
+      <div class="about-grid">
+
+        <div class="about-logo-wrap">
+          <div class="about-logo-border">
+            <img src="images/VMAN-logo.jpg" alt="VMan Racing Team">
+          </div>
+          <span class="about-logo-caption">VMAN RACING TEAM</span>
+        </div>
+
+        <div class="about-content">
+
+          <span class="section-label">WHO WE ARE</span>
+
+          <h2>
+            MORE THAN<br>
+            JUST <span>THE RIDE.</span>
+          </h2>
+
+          <p>
+            VMan Racing Team is your motorcycle parts and service shop
+            for riders who value performance, reliability, and the
+            passion behind every build.
+          </p>
+
+          <p>
+            From motorcycle oils and essential parts to repair and
+            improvement services, we're here to help keep your ride
+            ready for the road.
+          </p>
+
+          <a href="#contact" class="btn btn-red">
+            VISIT THE SHOP <span>↗</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section section-padding" id="contact">
+
+      <div class="section-heading">
+        <div>
+          <span class="section-label">FIND US • TALK TO US</span>
+          <h2>LET'S GET <span>YOU MOVING.</span></h2>
+          <p>Questions about products or services? Contact VMan Racing Team.</p>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-card">
+          <span class="contact-card-icon">⌖</span>
+          <span class="contact-label">VISIT OUR SHOP</span>
+          <h3>QUEZON CITY</h3>
+          <p>300 Visayas Avenue, Quezon City</p>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=300+Visayas+Avenue+Quezon+City"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GET DIRECTIONS ↗
+          </a>
+        </div>
+
+        <div class="contact-card">
+          <span class="contact-card-icon">☎</span>
+          <span class="contact-label">CALL OR TEXT</span>
+          <h3>0994 925 4805</h3>
+          <p>Contact us for products and service inquiries.</p>
+          <a href="tel:09949254805">CALL NOW ↗</a>
+        </div>
+
+        <div class="contact-card">
+          <span class="contact-card-icon">✉</span>
+          <span class="contact-label">ORDER ONLINE</span>
+          <h3>WHATSAPP</h3>
+          <p>Send your order or booking request directly.</p>
+          <a href="https://wa.me/639949254805" target="_blank" rel="noopener noreferrer">
+            MESSAGE US ↗
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SERVICE BOOKING FORM -->
+    <section class="booking-section section-padding" id="booking">
+
+      <div class="booking-grid">
+
+        <div class="booking-intro">
+          <span class="section-label">SERVICE APPOINTMENTS</span>
+
+          <h2>BOOK YOUR<br><span>BUILD.</span></h2>
+
+          <p>
+            Tell us what your motorcycle needs. Submit your preferred
+            service and schedule, and we'll contact you to confirm.
+          </p>
+
+          <div class="booking-contact-note">
+            <span class="red-dot"></span>
+            <span>Appointment requests are subject to shop confirmation.</span>
+          </div>
+        </div>
+
+        <form id="bookingForm" class="booking-form">
+
+          <div class="form-heading">
+            <span>BOOKING FORM</span>
+            <span>01 — 07</span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bookingName">FULL NAME *</label>
+              <input
+                type="text"
+                id="bookingName"
+                placeholder="Your full name"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="bookingPhone">PHONE NUMBER *</label>
+              <input
+                type="tel"
+                id="bookingPhone"
+                placeholder="09XXXXXXXXX"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="bookingMotorcycle">MOTORCYCLE MODEL *</label>
+            <input
+              type="text"
+              id="bookingMotorcycle"
+              placeholder="e.g. Suzuki Raider FI"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="bookingService">SERVICE NEEDED *</label>
+            <select id="bookingService" required>
+              <option value="">Select service</option>
+              <option value="VMan Front Suspension Repack - ₱1,300">
+                VMan Front Suspension Repack - ₱1,300
+              </option>
+              <option value="Raider FI 154cc - ₱3,000">
+                Raider FI 154cc - ₱3,000
+              </option>
+              <option value="Other / General Inquiry">
+                Other / General Inquiry
+              </option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bookingDate">PREFERRED DATE *</label>
+              <input type="date" id="bookingDate" required>
+            </div>
+
+            <div class="form-group">
+              <label for="bookingTime">PREFERRED TIME *</label>
+              <select id="bookingTime" required>
+                <option value="">Select time</option>
+                <option>9:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>1:00 PM</option>
+                <option>2:00 PM</option>
+                <option>3:00 PM</option>
+                <option>4:00 PM</option>
+                <option>5:00 PM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="bookingNotes">ADDITIONAL DETAILS</label>
+            <textarea
+              id="bookingNotes"
+              rows="3"
+              placeholder="Tell us more about your motorcycle or concern..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-red booking-submit">
+            SUBMIT BOOKING REQUEST <span>↗</span>
+          </button>
+
+          <p class="form-privacy-note">
+            Your request will open WhatsApp for confirmation.
+          </p>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="footer-main">
+
+      <div class="footer-brand">
+        <img src="images/VMAN-logo.jpg" alt="VMan Racing Team Logo">
+        <p>BUILT FOR THE RIDE.<br>MADE FOR PERFORMANCE.</p>
+      </div>
+
+      <div class="footer-links">
+        <span>QUICK LINKS</span>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-links">
+        <span>CONTACT</span>
+        <p>300 Visayas Avenue,<br>Quezon City</p>
+        <a href="tel:09949254805">0994 925 4805</a>
+        <a href="https://wa.me/639949254805" target="_blank" rel="noopener noreferrer">
+          WhatsApp
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="currentYear"></span> VMAN RACING TEAM. ALL RIGHTS RESERVED.</p>
+      <span>RIDE HARD. STAY FAST.</span>
+    </div>
+
+  </footer>
+
+  <!-- CART OVERLAY -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <!-- CART DRAWER -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+
+    <div class="cart-header">
+      <div>
+        <span class="section-label">YOUR SELECTION</span>
+        <h2>YOUR CART <span id="drawerCount">(0)</span></h2>
+      </div>
+
+      <button class="close-btn" id="closeCart" aria-label="Close cart">×</button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span>SUBTOTAL</span>
+        <strong id="cartSubtotal">₱0.00</strong>
+      </div>
+
+      <p class="cart-shipping-note">
+        Shipping or delivery fees are not included. These will be confirmed by the shop.
+      </p>
+
+      <button class="btn btn-red checkout-btn" id="checkoutButton">
+        PROCEED TO ORDER <span>↗</span>
+      </button>
+
+      <button class="continue-shopping" id="continueShopping">
+        CONTINUE SHOPPING
+      </button>
+    </div>
+
+  </aside>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="checkout-overlay" id="checkoutModal">
+
+    <div class="checkout-modal">
+
+      <div class="checkout-header">
+        <div>
+          <span class="section-label">VMAN RACING TEAM</span>
+          <h2>ORDER <span>DETAILS</span></h2>
+        </div>
+
+        <button class="close-btn" id="closeCheckout" aria-label="Close checkout">×</button>
+      </div>
+
+      <div class="checkout-summary" id="checkoutSummary"></div>
+
+      <form id="checkoutForm">
+
+        <div class="form-group">
+          <label for="customerName">FULL NAME *</label>
+          <input type="text" id="customerName" placeholder="Your name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="customerPhone">PHONE NUMBER *</label>
+          <input type="tel" id="customerPhone" placeholder="09XXXXXXXXX" required>
+        </div>
+
+        <div class="form-group">
+          <label for="customerAddress">DELIVERY ADDRESS *</label>
+          <textarea id="customerAddress" rows="2" placeholder="Complete address or write PICKUP" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="paymentMethod">PAYMENT PREFERENCE *</label>
+          <select id="paymentMethod" required>
+            <option value="">Select payment preference</option>
+            <option value="Cash on Delivery (if available)">Cash on Delivery (if available)</option>
+            <option value="Cash - Shop Pickup">Cash - Shop Pickup</option>
+            <option value="GCash (subject to shop confirmation)">GCash (subject to shop confirmation)</option>
+            <option value="Other / To be discussed">Other / To be discussed</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="orderNotes">ORDER NOTES</label>
+          <textarea id="orderNotes" rows="2" placeholder="Additional instructions..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-red checkout-submit">
+          SEND ORDER TO WHATSAPP <span>↗</span>
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
